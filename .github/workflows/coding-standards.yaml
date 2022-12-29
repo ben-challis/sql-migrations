@@ -1,0 +1,28 @@
+name: "Coding Standards"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  coding-standards:
+    runs-on: "ubuntu-22.04"
+    name: "Coding Standards"
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v3"
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "8.1"
+
+      - name: "Install dependencies"
+        uses: "ramsey/composer-install@v2"
+
+      - name: "Run PHP-CS-Fixer"
+        env:
+          PHP_CS_FIXER_FUTURE_MODE: 1
+        run: ./vendor/bin/php-cs-fixer fix --dry-run --diff --ansi

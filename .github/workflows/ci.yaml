@@ -1,0 +1,85 @@
+name: "Continuous Integration"
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "main"
+
+env:
+  fail-fast: true
+
+jobs:
+  tests-mysql:
+    name: "Integration Tests w/MySQL"
+    runs-on: "ubuntu-22.04"
+
+    strategy:
+      matrix:
+        mysql-version:
+          - "8.0"
+        php-version:
+          - "8.1"
+          - "8.2"
+
+    services:
+      mysql:
+        image: "mysql:${{ matrix.mysql-version }}"
+
+        options: >-
+          --health-cmd "mysqladmin ping --silent"
+          -e MYSQL_ALLOW_EMPTY_PASSWORD=yes
+          -e MYSQL_DATABASE=tests
+          --entrypoint sh mysql:8 -c "exec docker-entrypoint.sh mysqld --default-authentication-plugin=mysql_native_password"
+        ports:
+          - "3306:3306"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v3"
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "${{ matrix.php-version }}"
+          coverage: "xdebug"
+          ini-values: "zend.assertions=1"
+
+      - name: "Install dependencies"
+        uses: "ramsey/composer-install@v2"
+
+      - name: "Run tests"
+        run: ./vendor/bin/phpunit --colors --testsuite=integration --do-not-cache-result --group=MySQL
+
+  tests-unit:
+    name: "Unit Tests"
+    runs-on: "ubuntu-22.04"
+
+    strategy:
+      matrix:
+        php-version:
+          - "8.1"
+          - "8.2"
+        composer-dependencies:
+          - "lowest"
+          - "locked"
+          - "highest"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v3"
+
+      - name: "Install PHP"
+        uses: "shivammathur/setup-php@v2"
+        with:
+          php-version: "${{ matrix.php-version }}"
+          coverage: "none"
+          ini-values: "zend.assertions=1"
+
+      - name: "Install dependencies"
+        uses: "ramsey/composer-install@v2"
+        with:
+          dependency-versions: "${{ matrix.composer-dependencies }}"
+
+      - name: "Run unit tests"
+        run: "./vendor/bin/phpunit --colors --testsuite=unit --do-not-cache-result"
