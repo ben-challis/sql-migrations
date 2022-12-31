@@ -1,3 +1,5 @@
+[![Continuous Integration](https://github.com/ben-challis/sql-migrations/actions/workflows/ci.yaml/badge.svg?branch=main&event=push)](https://github.com/ben-challis/sql-migrations/actions/workflows/ci.yaml)
+
 # SQL Migrations
 
 **Work in progress**
