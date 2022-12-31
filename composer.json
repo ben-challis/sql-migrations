@@ -29,7 +29,7 @@
     "ext-pcntl": "*",
     "amphp/file": "^3.0@beta",
     "amphp/mysql": "^3.0@beta",
-    "amphp/sync": "^2.0@beta",
+    "amphp/sync": "^2.0",
     "azjezz/psl": "^2.3",
     "psr/clock-implementation": "*",
     "psr/log": "^3",
