@@ -11,6 +11,7 @@ use Amp\Mysql\MysqlConfig;
 use Amp\Sync\LocalMutex;
 use Amp\Sync\Mutex;
 use BenChallis\SqlMigrations\ClassDiscovery\Composer\AutoloaderClassDiscovererFactory;
+use BenChallis\SqlMigrations\ClassDiscovery\PhpNamespace;
 use BenChallis\SqlMigrations\Migration\Discovery\RevisionClassDiscoverer;
 use BenChallis\SqlMigrations\Migration\Discovery\RevisionDiscoverer;
 use BenChallis\SqlMigrations\Migration\Metadata\MySql\MySqlMetadataStore;
@@ -39,7 +40,8 @@ $migrations = MigrationsFactory::create(
             ),
             new SimpleRevisionFactory(),
         )
-    )
+    ),
+    PhpNamespace::fromString('App\Migrations')
 );
 
 $migrator = new Migrator($migrations, $connection);
