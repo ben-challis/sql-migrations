@@ -1,0 +1,21 @@
+<?php
+
+declare(strict_types=1);
+
+namespace %NAMESPACE%;
+
+use Amp\Sql\Link;
+use BenChallis\SqlMigrations\Migration\Revision;
+
+final class %CLASS_NAME% implements Revision
+{
+    public function apply(Link $link): void
+    {
+        // TODO Implement apply().
+    }
+
+    public function revert(Link $link): Promise
+    {
+        // TODO Implement revert().
+    }
+}
