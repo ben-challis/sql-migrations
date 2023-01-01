@@ -9,18 +9,15 @@ An SQL database migrations library based on [AMP](https://amphp.org). Currently 
 ```php
 use Amp\Mysql\MysqlConfig;
 use Amp\Sync\LocalMutex;
-use Amp\Sync\Mutex;
-use BenChallis\SqlMigrations\ClassDiscovery\Composer\AutoloaderClassDiscovererFactory;
 use BenChallis\SqlMigrations\ClassDiscovery\PhpNamespace;
-use BenChallis\SqlMigrations\Migration\Discovery\RevisionClassDiscoverer;
-use BenChallis\SqlMigrations\Migration\Discovery\RevisionDiscoverer;
+use BenChallis\SqlMigrations\ClassDiscovery\ReadableDirectory;
+use BenChallis\SqlMigrations\Migration\Discovery\RevisionDiscovererFactory;
 use BenChallis\SqlMigrations\Migration\Metadata\MySql\MySqlMetadataStore;
 use BenChallis\SqlMigrations\Migration\Metadata\MySql\MySqlSchemaManager;
 use BenChallis\SqlMigrations\Migration\Metadata\SchemaUpdatingMetadataStore;
 use BenChallis\SqlMigrations\Migration\MigrationCollector;
 use BenChallis\SqlMigrations\Migration\MigrationsFactory;
 use BenChallis\SqlMigrations\Migration\Migrator;
-use BenChallis\SqlMigrations\Migration\Revision\SimpleRevisionFactory;
 use function Amp\Mysql\connect;
 
 $connection = connect(MysqlConfig::fromAuthority(DB_HOST, DB_USER, DB_PASS, DB_DATABASE));
@@ -34,14 +31,9 @@ $migrations = MigrationsFactory::create(
     $metadata,
     new MigrationCollector(
         $metadata, 
-        new RevisionDiscoverer(
-            new RevisionClassDiscoverer(
-                (new AutoloaderClassDiscovererFactory())->fromVendorDirectory(__DIR__.'/vendor')
-            ),
-            new SimpleRevisionFactory(),
-        )
+        RevisionDiscovererFactory::create(ReadableDirectory::fromString(__DIR__.'/vendor')),
     ),
-    PhpNamespace::fromString('App\Migrations')
+    PhpNamespace::fromString('App\Migrations'),
 );
 
 $migrator = new Migrator($migrations, $connection);
