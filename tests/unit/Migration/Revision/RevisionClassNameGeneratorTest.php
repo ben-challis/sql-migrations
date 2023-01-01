@@ -8,7 +8,6 @@ use BenChallis\SqlMigrations\Migration\Revision\RevisionClassNameGenerator;
 use Lendable\Clock\FixedClock;
 use Lendable\Clock\SystemClock;
 use PHPUnit\Framework\TestCase;
-use Safe\DateTimeImmutable;
 
 /**
  * @covers \BenChallis\SqlMigrations\Migration\Revision\RevisionClassNameGenerator
@@ -45,7 +44,7 @@ final class RevisionClassNameGeneratorTest extends TestCase
      */
     public function will_create_a_class_name_with_the_current_timestamp_and_description(): void
     {
-        $clock = new FixedClock(new DateTimeImmutable('2022-10-11 12:32:41'));
+        $clock = new FixedClock(new \DateTimeImmutable('2022-10-11 12:32:41'));
         $generator = new RevisionClassNameGenerator($clock);
 
         $className = $generator->generate('FooBarBaz');

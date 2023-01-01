@@ -14,7 +14,8 @@ final class ReadableDirectory
         \assert(\is_readable($directory));
         \assert($directory[\strlen($directory) - 1] !== \DIRECTORY_SEPARATOR);
 
-        $realPath = \Safe\realpath($directory);
+        $realPath = \realpath($directory);
+        \assert(\is_string($realPath));
         $this->directory = $realPath;
     }
 
