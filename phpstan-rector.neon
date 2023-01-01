@@ -1,10 +1,10 @@
 includes:
-    - vendor/phpstan/phpstan-phpunit/extension.neon
-    - vendor/php-standard-library/phpstan-extension/extension.neon
+  - vendor/phpstan/phpstan-phpunit/extension.neon
+  - vendor/php-standard-library/phpstan-extension/extension.neon
 
 parameters:
-    phpVersion: 80100
-    tmpDir: tmp/phpstan
-    paths:
-        - src
-        - tests
+  phpVersion: 80100
+  tmpDir: tmp/phpstan
+  paths:
+    - src
+    - tests
