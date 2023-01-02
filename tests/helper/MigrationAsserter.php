@@ -49,4 +49,14 @@ final class MigrationAsserter
 
         return $this;
     }
+
+    /**
+     * @param class-string<Revision> $revisionClass
+     */
+    public function hasRevisionClass(string $revisionClass): self
+    {
+        Assert::assertInstanceOf($revisionClass, $this->migration->revision);
+
+        return $this;
+    }
 }
