@@ -7,6 +7,9 @@ namespace BenChallis\SqlMigrations\Migration;
 use BenChallis\SqlMigrations\Migration\Metadata\State;
 use Psl\Collection\VectorInterface;
 
+/**
+ * Defers loading migrations until interaction.
+ */
 final class LazyLoadingMigrations implements Migrations
 {
     /**

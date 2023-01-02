@@ -8,6 +8,9 @@ use BenChallis\SqlMigrations\Migration\Metadata\CannotTransitionState;
 use BenChallis\SqlMigrations\Migration\Metadata\State;
 use Psl\Collection\VectorInterface;
 
+/**
+ * The central access point into available migrations.
+ */
 interface Migrations
 {
     /**
