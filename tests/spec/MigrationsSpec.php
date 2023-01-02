@@ -11,7 +11,7 @@ use BenChallis\SqlMigrations\Migration\Migration;
 use BenChallis\SqlMigrations\Migration\MigrationDoesNotExist;
 use BenChallis\SqlMigrations\Migration\Migrations;
 use BenChallis\SqlMigrations\Migration\Version;
-use BenChallis\SqlMigrations\Migration\VersionExtractor;
+use BenChallis\SqlMigrations\Migration\ClassNameConventionVersionExtractor;
 use Psl\Collection\Vector;
 use Psl\Collection\VectorInterface;
 use Tests\Fixtures\BenChallis\SqlMigrations\Revision\Revision20181121094934CreateATable;
@@ -28,7 +28,7 @@ abstract class MigrationsSpec extends AsyncTestCase
      */
     final protected function expectedMigrations(): VectorInterface
     {
-        $versionExtractor = new VersionExtractor();
+        $versionExtractor = new ClassNameConventionVersionExtractor();
 
         $createATable = new Revision20181121094934CreateATable();
         $createAnotherTable = new Revision20181217101234CreateAnotherTable();
@@ -70,17 +70,17 @@ abstract class MigrationsSpec extends AsyncTestCase
             self::assertNotNull($all->filter(static fn (Migration $migration): bool => $expectedMigration->equals($migration))->first());
         }
 
-        $versionExtractor = new VersionExtractor();
+        $versionExtractor = new ClassNameConventionVersionExtractor();
         MigrationAsserter::assertThat($all->toArray()[0])
-            ->hasVersion($versionExtractor->fromClass(Revision20181121094934CreateATable::class))
+            ->hasVersion(ClassNameConventionVersionExtractor::fromClass(Revision20181121094934CreateATable::class))
             ->hasRevisionClass(Revision20181121094934CreateATable::class)
             ->isInState(State::Applied);
         MigrationAsserter::assertThat($all->toArray()[1])
-            ->hasVersion($versionExtractor->fromClass(Revision20181217101234CreateAnotherTable::class))
+            ->hasVersion(ClassNameConventionVersionExtractor::fromClass(Revision20181217101234CreateAnotherTable::class))
             ->hasRevisionClass(Revision20181217101234CreateAnotherTable::class)
             ->isInState(State::Unapplied);
         MigrationAsserter::assertThat($all->toArray()[2])
-            ->hasVersion($versionExtractor->fromClass(Revision20181222101234UpdateATable::class))
+            ->hasVersion(ClassNameConventionVersionExtractor::fromClass(Revision20181222101234UpdateATable::class))
             ->hasRevisionClass(Revision20181222101234UpdateATable::class)
             ->isInState(State::Unapplied);
     }
@@ -114,7 +114,7 @@ abstract class MigrationsSpec extends AsyncTestCase
     {
         $migrations = $this->createMigrations();
 
-        $version = (new VersionExtractor())->fromClass(Revision20181217101234CreateAnotherTable::class);
+        $version = ClassNameConventionVersionExtractor::fromClass(Revision20181217101234CreateAnotherTable::class);
         $updated = $migrations->changeState($version, State::Applying);
 
         self::assertSame(State::Applying, $updated->metadata->state);
