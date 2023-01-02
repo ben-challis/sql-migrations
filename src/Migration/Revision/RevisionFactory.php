@@ -12,6 +12,8 @@ interface RevisionFactory
      * @param class-string<T> $revisionClass
      *
      * @return T
+     *
+     * @throws CannotInstantiateRevision
      */
     public function create(string $revisionClass): Revision;
 }

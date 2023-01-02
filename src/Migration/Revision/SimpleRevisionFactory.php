@@ -11,6 +11,15 @@ final class SimpleRevisionFactory implements RevisionFactory
 {
     public function create(string $revisionClass): Revision
     {
+        $constructor = (new \ReflectionClass($revisionClass))->getConstructor();
+
+        if ($constructor !== null && ($constructor->getNumberOfParameters() > 0 || !$constructor->isPublic())) {
+            throw CannotInstantiateRevision::forClass(
+                $revisionClass,
+                new \RuntimeException('The class does not have a zero parameter public constructor.'),
+            );
+        }
+
         return new $revisionClass();
     }
 }

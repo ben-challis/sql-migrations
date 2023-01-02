@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace BenChallis\SqlMigrations\Migration\Revision;
 
+use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 
 final class ServiceLocatorRevisionFactory implements RevisionFactory
@@ -14,8 +15,24 @@ final class ServiceLocatorRevisionFactory implements RevisionFactory
 
     public function create(string $revisionClass): Revision
     {
-        $revision = $this->revisions->get($revisionClass);
-        \assert($revision instanceof $revisionClass);
+        try {
+            $revision = $this->revisions->get($revisionClass);
+        } catch (ContainerExceptionInterface $exception) {
+            throw CannotInstantiateRevision::forClass($revisionClass, $exception);
+        }
+
+        if (!$revision instanceof $revisionClass) {
+            throw CannotInstantiateRevision::forClass(
+                $revisionClass,
+                new \RuntimeException(
+                    \sprintf(
+                        'Expected instance of "%s" from the service locator, "%s" provided.',
+                        $revisionClass,
+                        \get_debug_type($revision),
+                    ),
+                ),
+            );
+        }
 
         return $revision;
     }
