@@ -6,6 +6,7 @@ namespace Tests\Unit\BenChallis\SqlMigrations\Migration;
 
 use BenChallis\SqlMigrations\Migration\Version;
 use BenChallis\SqlMigrations\Migration\ClassNameConventionVersionExtractor;
+use BenChallis\SqlMigrations\Migration\VersionCouldNotBeExtracted;
 use PHPUnit\Framework\TestCase;
 use Tests\Fixtures\BenChallis\SqlMigrations\Revision\Revision20181121094934CreateATable;
 use Tests\Fixtures\BenChallis\SqlMigrations\RevisionFixtures;
@@ -32,7 +33,7 @@ final class ClassNameConventionVersionExtractorTest extends TestCase
      */
     public function throws_if_class_name_doesnt_conform_to_naming_convention_by_class(): void
     {
-        $this->expectException(\RuntimeException::class);
+        $this->expectException(VersionCouldNotBeExtracted::class);
 
         ClassNameConventionVersionExtractor::fromClass(RevisionFixtures::notMatchingExpectedNamingConvention()::class);
     }
@@ -42,7 +43,7 @@ final class ClassNameConventionVersionExtractorTest extends TestCase
      */
     public function throws_if_class_name_doesnt_conform_to_naming_convention_by_instance(): void
     {
-        $this->expectException(\RuntimeException::class);
+        $this->expectException(VersionCouldNotBeExtracted::class);
 
         (new ClassNameConventionVersionExtractor())->fromInstance(RevisionFixtures::notMatchingExpectedNamingConvention());
     }
