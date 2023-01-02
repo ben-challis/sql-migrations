@@ -8,7 +8,7 @@ use BenChallis\SqlMigrations\Migration\Metadata\Metadata;
 use BenChallis\SqlMigrations\Migration\Metadata\State;
 use BenChallis\SqlMigrations\Migration\Migration;
 use BenChallis\SqlMigrations\Migration\MigrationStuck;
-use BenChallis\SqlMigrations\Migration\VersionExtractor;
+use BenChallis\SqlMigrations\Migration\ClassNameConventionVersionExtractor;
 use PHPUnit\Framework\TestCase;
 use Tests\Fixtures\BenChallis\SqlMigrations\Revision\Revision20181121094934CreateATable;
 
@@ -26,7 +26,7 @@ final class MigrationStuckTest extends TestCase
         $e = MigrationStuck::for(
             Migration::with(
                 $revision,
-                Metadata::with((new VersionExtractor())->fromInstance($revision), State::Applying),
+                Metadata::with((new ClassNameConventionVersionExtractor())->fromInstance($revision), State::Applying),
             ),
         );
 
