@@ -16,9 +16,12 @@ final class VersionCouldNotBeExtracted extends \RuntimeException
         parent::__construct($message.($detail === null ? '' : ' '.$detail));
     }
 
-    public static function fromRevision(Revision $revision): self
+    /**
+     * @param non-empty-string|null $detail
+     */
+    public static function fromRevision(Revision $revision, ?string $detail = null): self
     {
-        return self::fromRevisionClass($revision::class);
+        return self::fromRevisionClass($revision::class, $detail);
     }
 
     /**
