@@ -9,6 +9,7 @@ use Psl\Collection\MapInterface;
 use Psl\Collection\MutableMap;
 use Psl\Collection\Vector;
 use Psl\Collection\VectorInterface;
+use Psl\Dict;
 
 final class InMemoryMigrations implements Migrations
 {
@@ -22,7 +23,7 @@ final class InMemoryMigrations implements Migrations
      */
     public function __construct(MapInterface $map)
     {
-        $this->map = new MutableMap($map->toArray());
+        $this->map = new MutableMap(Dict\sort_by_key($map->toArray()));
     }
 
     public function getAll(): VectorInterface
