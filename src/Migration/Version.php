@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace BenChallis\SqlMigrations\Migration;
 
+/**
+ * A migration's schema version.
+ *
+ * The schema versions are treated as being in ascending order, but not sequential.
+ */
 final class Version
 {
     /**
