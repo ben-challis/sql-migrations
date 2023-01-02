@@ -4,23 +4,31 @@ declare(strict_types=1);
 
 namespace BenChallis\SqlMigrations\Migration;
 
+use BenChallis\SqlMigrations\Migration\Metadata\CannotTransitionState;
 use BenChallis\SqlMigrations\Migration\Metadata\State;
 use Psl\Collection\VectorInterface;
 
 interface Migrations
 {
     /**
+     * Gets all migrations, in ascending order of version.
+     *
      * @return VectorInterface<Migration>
      */
     public function getAll(): VectorInterface;
 
     /**
-     * @throws MigrationDoesNotExist
+     * Gets a specific migration by version.
+     *
+     * @throws MigrationDoesNotExist If the migration does not exist.
      */
     public function get(Version $version): Migration;
 
     /**
-     * @throws MigrationDoesNotExist
+     * Changes the state of a migration.
+     *
+     * @throws MigrationDoesNotExist If the migration does not exist.
+     * @throws CannotTransitionState If the migration cannot be changed into the provided state.
      */
     public function changeState(Version $version, State $state): Migration;
 }
