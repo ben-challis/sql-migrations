@@ -8,5 +8,8 @@ use BenChallis\SqlMigrations\Migration\Revision\Revision;
 
 interface VersionExtractor
 {
+    /**
+     * @throws VersionCouldNotBeExtracted
+     */
     public function fromInstance(Revision $revision): Version;
 }

@@ -14,6 +14,8 @@ final class ClassNameConventionVersionExtractor implements VersionExtractor
 
     /**
      * @param class-string<Revision> $className
+     *
+     * @throws VersionCouldNotBeExtracted
      */
     public static function fromClass(string $className): Version
     {
@@ -21,8 +23,9 @@ final class ClassNameConventionVersionExtractor implements VersionExtractor
             (new \ReflectionClass($className))->getShortName(),
             self::PATTERN,
             Type\shape([0 => Type\non_empty_string(), 1 => Type\positive_int()]),
-        ) ?? throw new \RuntimeException(
-            \sprintf('Pattern %s did not match class name %s.', self::PATTERN, $className),
+        ) ?? throw VersionCouldNotBeExtracted::fromRevisionClass(
+            $className,
+            \sprintf('Pattern "%s" did not match the class name.', self::PATTERN),
         );
 
         \assert($match[1] > 0); // PHPStan doesn't seem to understand fully this must be a positive-int.
