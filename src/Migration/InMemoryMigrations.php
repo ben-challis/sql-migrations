@@ -11,6 +11,9 @@ use Psl\Collection\Vector;
 use Psl\Collection\VectorInterface;
 use Psl\Dict;
 
+/**
+ * In-memory state of migrations, requiring data upfront.
+ */
 final class InMemoryMigrations implements Migrations
 {
     /**

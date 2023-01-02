@@ -9,6 +9,9 @@ use BenChallis\SqlMigrations\Migration\Metadata\MetadataStore;
 use BenChallis\SqlMigrations\Migration\Metadata\State;
 use Psl\Collection\VectorInterface;
 
+/**
+ * Decorator that updates a {@see MetadataStore} when state changes are performed.
+ */
 final class MetadataUpdatingMigrations implements Migrations
 {
     public function __construct(
