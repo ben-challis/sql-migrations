@@ -9,6 +9,9 @@ use BenChallis\SqlMigrations\ClassDiscovery\ReadableDirectory;
 use BenChallis\SqlMigrations\Migration\Revision\RevisionFactory;
 use BenChallis\SqlMigrations\Migration\Revision\SimpleRevisionFactory;
 
+/**
+ * Factory to simplify constructing a {@see RevisionDiscoverer}.
+ */
 final class RevisionDiscovererFactory
 {
     private function __construct()

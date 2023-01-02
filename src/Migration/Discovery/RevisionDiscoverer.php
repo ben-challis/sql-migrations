@@ -8,6 +8,10 @@ use BenChallis\SqlMigrations\ClassDiscovery\PhpNamespace;
 use BenChallis\SqlMigrations\Migration\Revision\Revision;
 use BenChallis\SqlMigrations\Migration\Revision\RevisionFactory;
 
+/**
+ * Discovers {@see Revision}s via a {@see RevisionClassDiscoverer} to discover classes, and a {@see RevisionFactory}
+ * to instantiate them.
+ */
 final class RevisionDiscoverer
 {
     public function __construct(
