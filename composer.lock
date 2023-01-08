@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc911bf3e9eb1fc682984ee302865fe8",
+    "content-hash": "5a6e1a79e4539a41fc19e96854decccd",
     "packages": [
         {
             "name": "amphp/amp",
@@ -4352,8 +4352,10 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
+        "amphp/byte-stream": 10,
         "amphp/file": 10,
-        "amphp/mysql": 10
+        "amphp/mysql": 10,
+        "amphp/socket": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,
