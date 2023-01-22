@@ -228,16 +228,16 @@
         },
         {
             "name": "amphp/dns",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/dns.git",
-                "reference": "ac877da1685741723f8227b10bc4fb0a1e460f05"
+                "reference": "e42876aa8306c754abd1b3e71a44e13066909fd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/dns/zipball/ac877da1685741723f8227b10bc4fb0a1e460f05",
-                "reference": "ac877da1685741723f8227b10bc4fb0a1e460f05",
+                "url": "https://api.github.com/repos/amphp/dns/zipball/e42876aa8306c754abd1b3e71a44e13066909fd1",
+                "reference": "e42876aa8306c754abd1b3e71a44e13066909fd1",
                 "shasum": ""
             },
             "require": {
@@ -304,7 +304,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/dns/issues",
-                "source": "https://github.com/amphp/dns/tree/v2.0.0"
+                "source": "https://github.com/amphp/dns/tree/v2.0.1"
             },
             "funding": [
                 {
@@ -312,7 +312,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-10T22:42:54+00:00"
+            "time": "2023-01-21T16:00:09+00:00"
         },
         {
             "name": "amphp/file",
