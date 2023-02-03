@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11de972c66c446ab5704a4c1f2ceca32",
+    "content-hash": "c17ef205220818e543be419fb9e30a89",
     "packages": [
         {
             "name": "amphp/amp",
@@ -89,16 +89,16 @@
         },
         {
             "name": "amphp/byte-stream",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/byte-stream.git",
-                "reference": "c102b620c14f44e83436b6f9bced6f40ca482bff"
+                "reference": "7e7a77579f3e90c6fbd56e49628e6ace02d8f88a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/byte-stream/zipball/c102b620c14f44e83436b6f9bced6f40ca482bff",
-                "reference": "c102b620c14f44e83436b6f9bced6f40ca482bff",
+                "url": "https://api.github.com/repos/amphp/byte-stream/zipball/7e7a77579f3e90c6fbd56e49628e6ace02d8f88a",
+                "reference": "7e7a77579f3e90c6fbd56e49628e6ace02d8f88a",
                 "shasum": ""
             },
             "require": {
@@ -151,7 +151,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/byte-stream/issues",
-                "source": "https://github.com/amphp/byte-stream/tree/v2.0.0"
+                "source": "https://github.com/amphp/byte-stream/tree/v2.0.1"
             },
             "funding": [
                 {
@@ -159,7 +159,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-07T16:05:54+00:00"
+            "time": "2023-02-03T04:06:20+00:00"
         },
         {
             "name": "amphp/cache",
@@ -4350,6 +4350,7 @@
         "amphp/byte-stream": 10,
         "amphp/file": 10,
         "amphp/mysql": 10,
+        "amphp/parallel": 10,
         "amphp/socket": 10
     },
     "prefer-stable": false,
