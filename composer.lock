@@ -406,20 +406,21 @@
         },
         {
             "name": "amphp/mysql",
-            "version": "v3.0.0-beta.4",
+            "version": "v3.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/mysql.git",
-                "reference": "25a3111d921431d4e4fa5a761f46f9ecc69b78ca"
+                "reference": "857b0adfff0c84d22a81e9a6226efc67f820a7f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/mysql/zipball/25a3111d921431d4e4fa5a761f46f9ecc69b78ca",
-                "reference": "25a3111d921431d4e4fa5a761f46f9ecc69b78ca",
+                "url": "https://api.github.com/repos/amphp/mysql/zipball/857b0adfff0c84d22a81e9a6226efc67f820a7f6",
+                "reference": "857b0adfff0c84d22a81e9a6226efc67f820a7f6",
                 "shasum": ""
             },
             "require": {
                 "amphp/amp": "^3",
+                "amphp/parser": "^1.1",
                 "amphp/pipeline": "^1",
                 "amphp/socket": "^2",
                 "amphp/sql": "^2",
@@ -435,7 +436,7 @@
                 "ext-openssl": "*",
                 "phpbench/phpbench": "^1.2.6",
                 "phpunit/phpunit": "^9",
-                "psalm/phar": "^4.22"
+                "psalm/phar": "^5.4"
             },
             "type": "library",
             "autoload": {
@@ -463,7 +464,7 @@
             "description": "Asynchronous MySQL client for PHP based on Amp.",
             "support": {
                 "issues": "https://github.com/amphp/mysql/issues",
-                "source": "https://github.com/amphp/mysql/tree/v3.0.0-beta.4"
+                "source": "https://github.com/amphp/mysql/tree/v3.0.0-beta.5"
             },
             "funding": [
                 {
@@ -471,7 +472,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-18T05:27:04+00:00"
+            "time": "2023-02-12T15:40:51+00:00"
         },
         {
             "name": "amphp/parallel",
