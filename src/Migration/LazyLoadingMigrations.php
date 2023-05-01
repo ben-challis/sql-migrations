@@ -36,7 +36,7 @@ final class LazyLoadingMigrations implements Migrations
             ($this->loader)();
         }
 
-        \assert($this->migrations !== null);
+        \assert($this->migrations instanceof Migrations);
 
         return $this->migrations->getAll();
     }
@@ -47,7 +47,7 @@ final class LazyLoadingMigrations implements Migrations
             ($this->loader)();
         }
 
-        \assert($this->migrations !== null);
+        \assert($this->migrations instanceof Migrations);
 
         return $this->migrations->get($version);
     }
@@ -58,7 +58,7 @@ final class LazyLoadingMigrations implements Migrations
             ($this->loader)();
         }
 
-        \assert($this->migrations !== null);
+        \assert($this->migrations instanceof Migrations);
 
         return $this->migrations->changeState($version, $state);
     }
