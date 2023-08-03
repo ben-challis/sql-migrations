@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "775e2984341225bdfd492e5116976fa0",
+    "content-hash": "d859a0e947029d84aff309d8d4e432d9",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3285,16 +3285,16 @@
         },
         {
             "name": "rector/rector",
-            "version": "0.17.7",
+            "version": "0.17.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "0e76101aa329911b7fec43106aac5843a978b209"
+                "reference": "8451dc04753c8a5897a837aca5ceb7f58999759c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/0e76101aa329911b7fec43106aac5843a978b209",
-                "reference": "0e76101aa329911b7fec43106aac5843a978b209",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/8451dc04753c8a5897a837aca5ceb7f58999759c",
+                "reference": "8451dc04753c8a5897a837aca5ceb7f58999759c",
                 "shasum": ""
             },
             "require": {
@@ -3334,7 +3334,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/0.17.7"
+                "source": "https://github.com/rectorphp/rector/tree/0.17.9"
             },
             "funding": [
                 {
@@ -3342,7 +3342,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-23T20:44:23+00:00"
+            "time": "2023-08-03T13:14:27+00:00"
         },
         {
             "name": "sebastian/cli-parser",
