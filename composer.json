@@ -51,7 +51,7 @@
     "phpstan/phpstan-strict-rules": "^1.5.1",
     "phpunit/phpunit": "^9.6.10",
     "psr/container": "^2.0",
-    "rector/rector": "^0.17.10"
+    "rector/rector": "^0.17.12"
   },
   "config": {
     "sort-packages": true,
