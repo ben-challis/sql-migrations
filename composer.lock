@@ -1007,16 +1007,16 @@
         },
         {
             "name": "amphp/sync",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/sync.git",
-                "reference": "ad8a0e80cc586cece4f8ce57460f8bbf442ba8fc"
+                "reference": "50ddc7392cc8034b3e4798cef3cc90d3f4c0441c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/sync/zipball/ad8a0e80cc586cece4f8ce57460f8bbf442ba8fc",
-                "reference": "ad8a0e80cc586cece4f8ce57460f8bbf442ba8fc",
+                "url": "https://api.github.com/repos/amphp/sync/zipball/50ddc7392cc8034b3e4798cef3cc90d3f4c0441c",
+                "reference": "50ddc7392cc8034b3e4798cef3cc90d3f4c0441c",
                 "shasum": ""
             },
             "require": {
@@ -1070,7 +1070,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/sync/issues",
-                "source": "https://github.com/amphp/sync/tree/v2.0.0"
+                "source": "https://github.com/amphp/sync/tree/v2.1.0"
             },
             "funding": [
                 {
@@ -1078,7 +1078,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-30T22:11:37+00:00"
+            "time": "2023-08-19T13:53:40+00:00"
         },
         {
             "name": "amphp/windows-registry",
