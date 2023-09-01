@@ -7,9 +7,9 @@ namespace BenChallis\SqlMigrations\Migration\Revision;
 use Psl\Regex;
 use Psr\Clock\ClockInterface;
 
-final class RevisionClassNameGenerator
+final readonly class RevisionClassNameGenerator
 {
-    public function __construct(private readonly ClockInterface $clock)
+    public function __construct(private ClockInterface $clock)
     {
     }
 

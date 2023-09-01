@@ -7,9 +7,9 @@ namespace BenChallis\SqlMigrations\Migration\Revision;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 
-final class ServiceLocatorRevisionFactory implements RevisionFactory
+final readonly class ServiceLocatorRevisionFactory implements RevisionFactory
 {
-    public function __construct(private readonly ContainerInterface $revisions)
+    public function __construct(private ContainerInterface $revisions)
     {
     }
 

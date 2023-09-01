@@ -7,12 +7,12 @@ namespace BenChallis\SqlMigrations\ClassDiscovery\Composer;
 use BenChallis\SqlMigrations\ClassDiscovery\ClassDiscoverer;
 use BenChallis\SqlMigrations\ClassDiscovery\PhpNamespace;
 
-final class ClassMapClassDiscoverer implements ClassDiscoverer
+final readonly class ClassMapClassDiscoverer implements ClassDiscoverer
 {
     /**
      * @param array<class-string, non-empty-string> $config
      */
-    public function __construct(private readonly array $config)
+    public function __construct(private array $config)
     {
     }
 

@@ -12,11 +12,11 @@ use BenChallis\SqlMigrations\Migration\Revision\RevisionFactory;
  * Discovers {@see Revision}s via a {@see RevisionClassDiscoverer} to discover classes, and a {@see RevisionFactory}
  * to instantiate them.
  */
-final class RevisionDiscoverer
+final readonly class RevisionDiscoverer
 {
     public function __construct(
-        private readonly RevisionClassDiscoverer $classDiscoverer,
-        private readonly RevisionFactory $factory,
+        private RevisionClassDiscoverer $classDiscoverer,
+        private RevisionFactory $factory,
     ) {
     }
 

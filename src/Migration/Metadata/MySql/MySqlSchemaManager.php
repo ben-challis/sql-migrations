@@ -12,12 +12,12 @@ use BenChallis\SqlMigrations\Migration\Metadata\SchemaManager;
 /**
  * @implements SchemaManager<MysqlResult, MysqlStatement>
  */
-final class MySqlSchemaManager implements SchemaManager
+final readonly class MySqlSchemaManager implements SchemaManager
 {
     /**
      * @param non-empty-string $databaseName
      */
-    public function __construct(private readonly string $databaseName)
+    public function __construct(private string $databaseName)
     {
     }
 

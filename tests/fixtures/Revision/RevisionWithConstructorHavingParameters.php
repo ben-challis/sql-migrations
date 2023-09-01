@@ -7,9 +7,9 @@ namespace Tests\Fixtures\BenChallis\SqlMigrations\Revision;
 use Amp\Sql\Executor;
 use BenChallis\SqlMigrations\Migration\Revision\Revision;
 
-final class RevisionWithConstructorHavingParameters implements Revision
+final readonly class RevisionWithConstructorHavingParameters implements Revision
 {
-    public function __construct(private readonly string $foo) // @phpstan-ignore-line
+    public function __construct(private string $foo) // @phpstan-ignore-line
     {
     }
 

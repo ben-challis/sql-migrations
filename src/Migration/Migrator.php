@@ -10,7 +10,7 @@ use Amp\Sql\Statement;
 use Amp\Sync\Mutex;
 use BenChallis\SqlMigrations\Migration\Metadata\State;
 
-final class Migrator
+final readonly class Migrator
 {
     /**
      * @template TResult of Result
@@ -18,7 +18,7 @@ final class Migrator
      *
      * @param Executor<TResult, TStatement> $executor
      */
-    public function __construct(private readonly Migrations $migrations, private readonly Executor $executor)
+    public function __construct(private Migrations $migrations, private Executor $executor)
     {
     }
 

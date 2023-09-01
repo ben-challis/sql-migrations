@@ -6,9 +6,9 @@ namespace BenChallis\SqlMigrations\Migration\Revision;
 
 use Amp\File;
 
-final class RevisionGenerator
+final readonly class RevisionGenerator
 {
-    public function __construct(private readonly RevisionClassNameGenerator $classNameGenerator)
+    public function __construct(private RevisionClassNameGenerator $classNameGenerator)
     {
     }
 

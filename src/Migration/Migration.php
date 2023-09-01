@@ -8,9 +8,9 @@ use BenChallis\SqlMigrations\Migration\Metadata\Metadata;
 use BenChallis\SqlMigrations\Migration\Metadata\State;
 use BenChallis\SqlMigrations\Migration\Revision\Revision;
 
-final class Migration
+final readonly class Migration
 {
-    public function __construct(public readonly Revision $revision, public readonly Metadata $metadata)
+    public function __construct(public Revision $revision, public Metadata $metadata)
     {
     }
 

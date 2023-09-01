@@ -10,12 +10,12 @@ use BenChallis\SqlMigrations\Migration\Metadata\Metadata;
 use BenChallis\SqlMigrations\Migration\Metadata\MetadataStore;
 use BenChallis\SqlMigrations\Migration\Metadata\State;
 
-final class MigrationCollector
+final readonly class MigrationCollector
 {
     public function __construct(
-        private readonly MetadataStore $metadata,
-        private readonly RevisionDiscoverer $revisionDiscoverer,
-        private readonly VersionExtractor $versionExtractor,
+        private MetadataStore $metadata,
+        private RevisionDiscoverer $revisionDiscoverer,
+        private VersionExtractor $versionExtractor,
     ) {
     }
 

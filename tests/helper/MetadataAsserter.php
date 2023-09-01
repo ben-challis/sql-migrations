@@ -9,9 +9,9 @@ use BenChallis\SqlMigrations\Migration\Metadata\State;
 use BenChallis\SqlMigrations\Migration\Version;
 use PHPUnit\Framework\Assert;
 
-final class MetadataAsserter
+final readonly class MetadataAsserter
 {
-    private function __construct(private readonly Metadata $metadata)
+    private function __construct(private Metadata $metadata)
     {
     }
 

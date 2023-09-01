@@ -11,9 +11,9 @@ use BenChallis\SqlMigrations\Migration\Revision\Revision;
 use BenChallis\SqlMigrations\Migration\Version;
 use PHPUnit\Framework\Assert;
 
-final class MigrationAsserter
+final readonly class MigrationAsserter
 {
-    private function __construct(private readonly Migration $migration)
+    private function __construct(private Migration $migration)
     {
     }
 
