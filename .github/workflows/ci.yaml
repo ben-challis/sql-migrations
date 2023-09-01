@@ -31,7 +31,10 @@ jobs:
         image: "mysql:${{ matrix.mysql-version }}"
 
         options: >-
-          --health-cmd "mysqladmin ping --silent"
+          --health-cmd "mysqladmin ping --silent" 
+          --health-interval=1s 
+          --health-timeout=5s 
+          --health-retries=90
           -e MYSQL_ALLOW_EMPTY_PASSWORD=yes
           -e MYSQL_DATABASE=tests
           -e MYSQL_INITDB_SKIP_TZINFO=yes
