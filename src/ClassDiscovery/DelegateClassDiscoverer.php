@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace BenChallis\SqlMigrations\ClassDiscovery;
 
-final class DelegateClassDiscoverer implements ClassDiscoverer
+final readonly class DelegateClassDiscoverer implements ClassDiscoverer
 {
     /**
      * @var list<ClassDiscoverer>
      */
-    private readonly array $discoverers;
+    private array $discoverers;
 
     public function __construct(ClassDiscoverer ...$discoverers)
     {

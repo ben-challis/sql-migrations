@@ -10,14 +10,14 @@ use BenChallis\SqlMigrations\ClassDiscovery\PhpNamespace;
 use BenChallis\SqlMigrations\ClassDiscovery\ReadableDirectory;
 use Symfony\Component\Finder\Finder;
 
-final class Psr4NamespacePrefixClassDiscoverer implements ClassDiscoverer
+final readonly class Psr4NamespacePrefixClassDiscoverer implements ClassDiscoverer
 {
     /**
      * @var list<ReadableDirectory>
      */
-    private readonly array $directories;
+    private array $directories;
 
-    public function __construct(private readonly PhpNamespace $namespacePrefix, ReadableDirectory ...$directories)
+    public function __construct(private PhpNamespace $namespacePrefix, ReadableDirectory ...$directories)
     {
         $this->directories = \array_values($directories);
     }
