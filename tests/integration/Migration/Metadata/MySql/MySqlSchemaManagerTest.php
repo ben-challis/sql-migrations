@@ -29,7 +29,7 @@ final class MySqlSchemaManagerTest extends SchemaManagerSpec
     {
         return (new Mysql\SocketMysqlConnector())
             ->connect(
-                MysqlConfig::fromAuthority('127.0.0.1', 'root', '', 'tests'),
+                MysqlConfig::fromAuthority('mysql', 'root', '', 'tests'),
             );
     }
 
