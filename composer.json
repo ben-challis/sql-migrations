@@ -41,7 +41,7 @@
   },
   "require-dev": {
     "amphp/phpunit-util": "^3.0",
-    "ergebnis/phpstan-rules": "^1.0",
+    "ergebnis/phpstan-rules": "^2.1",
     "lendable/clock": "^2.3",
     "php-cs-fixer/shim": "^v3.25.0",
     "php-standard-library/phpstan-extension": "^1.0",
