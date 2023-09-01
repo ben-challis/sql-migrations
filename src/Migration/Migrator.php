@@ -25,6 +25,8 @@ final readonly class Migrator
     /**
      * @param Mutex $mutex A mutex to ensure that migrations cannot be run concurrently and race condition
      * against each other.
+     *
+     * @throws MigrationStuck If a migration is stuck in a state which requires manual intervention
      */
     public function migrate(Mutex $mutex): void
     {
