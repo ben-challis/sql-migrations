@@ -57,7 +57,10 @@ jobs:
       - name: "Install OS dependencies"
         run: "apk add --no-cache bash"
 
-      - name: "Install dependencies"
+      - name: "Install Composer"
+        run: "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=2.5.8"
+
+      - name: "Install Composer dependencies"
         uses: "ramsey/composer-install@v2"
 
       - name: "Run tests"
@@ -92,7 +95,10 @@ jobs:
       - name: "Install OS dependencies"
         run: "apk add --no-cache bash"
 
-      - name: "Install dependencies"
+      - name: "Install Composer"
+        run: "curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer --version=2.5.8"
+
+      - name: "Install Composer dependencies"
         uses: "ramsey/composer-install@v2"
         with:
           dependency-versions: "${{ matrix.composer-dependencies }}"
