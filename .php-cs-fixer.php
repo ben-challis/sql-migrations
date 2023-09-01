@@ -66,7 +66,7 @@ return (new PhpCsFixer\Config())
         'no_singleline_whitespace_before_semicolons' => true,
         'no_spaces_after_function_name' => true,
         'no_spaces_around_offset' => true,
-        'no_spaces_inside_parenthesis' => true,
+        'spaces_inside_parentheses' => true,
         'no_superfluous_elseif' => true,
         'no_superfluous_phpdoc_tags' => ['allow_mixed' => true],
         'no_trailing_comma_in_singleline' => true,
