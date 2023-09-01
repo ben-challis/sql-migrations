@@ -57,7 +57,7 @@ jobs:
         run: "./vendor/bin/phpunit --colors --testsuite=integration --do-not-cache-result --group=MySQL"
 
   tests-unit:
-    name: "Unit Tests"
+    name: "Unit Tests (PHP ${{ matrix.php-version }}, dependencies ${{ matrix.composer-dependencies }})"
     runs-on: "ubuntu-22.04"
 
     strategy:
