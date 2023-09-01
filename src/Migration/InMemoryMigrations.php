@@ -14,12 +14,12 @@ use Psl\Dict;
 /**
  * In-memory state of migrations, requiring data upfront.
  */
-final class InMemoryMigrations implements Migrations
+final readonly class InMemoryMigrations implements Migrations
 {
     /**
      * @var MutableMap<int, Migration>
      */
-    private readonly MutableMap $map;
+    private MutableMap $map;
 
     /**
      * @param MapInterface<int, Migration> $map

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace BenChallis\SqlMigrations\ClassDiscovery;
 
-final class ReadableFile
+final readonly class ReadableFile
 {
-    private readonly string $filePath;
+    private string $filePath;
 
     private function __construct(string $filePath)
     {
