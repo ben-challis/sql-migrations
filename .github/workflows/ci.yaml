@@ -34,6 +34,7 @@ jobs:
           --health-cmd "mysqladmin ping --silent"
           -e MYSQL_ALLOW_EMPTY_PASSWORD=yes
           -e MYSQL_DATABASE=tests
+          -e MYSQL_INITDB_SKIP_TZINFO=yes
           --entrypoint sh mysql:8 -c "exec docker-entrypoint.sh mysqld --default-authentication-plugin=mysql_native_password"
         ports:
           - "3306:3306"
