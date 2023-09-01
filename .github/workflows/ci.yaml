@@ -15,7 +15,7 @@ env:
 
 jobs:
   tests-mysql:
-    name: "Integration Tests w/MySQL"
+    name: "Integration Tests w/MySQL (PHP ${{ matrix.php-version }}, MySQL ${{ matrix.mysql-version }})"
     runs-on: "ubuntu-22.04"
 
     strategy:
@@ -54,10 +54,10 @@ jobs:
         uses: "ramsey/composer-install@v2"
 
       - name: "Run tests"
-        run: ./vendor/bin/phpunit --colors --testsuite=integration --do-not-cache-result --group=MySQL
+        run: "./vendor/bin/phpunit --colors --testsuite=integration --do-not-cache-result --group=MySQL"
 
   tests-unit:
-    name: "Unit Tests"
+    name: "Unit Tests (PHP ${{ matrix.php-version }}, dependencies ${{ matrix.composer-dependencies }})"
     runs-on: "ubuntu-22.04"
 
     strategy:
