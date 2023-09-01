@@ -9,12 +9,12 @@ namespace BenChallis\SqlMigrations\Migration;
  *
  * The schema versions are treated as being in ascending order, but not sequential.
  */
-final class Version
+final readonly class Version
 {
     /**
      * @param positive-int $value
      */
-    private function __construct(private readonly int $value)
+    private function __construct(private int $value)
     {
     }
 

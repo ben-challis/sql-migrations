@@ -12,11 +12,11 @@ use Psl\Collection\VectorInterface;
 /**
  * Decorator that updates a {@see MetadataStore} when state changes are performed.
  */
-final class MetadataUpdatingMigrations implements Migrations
+final readonly class MetadataUpdatingMigrations implements Migrations
 {
     public function __construct(
-        private readonly Migrations $migrations,
-        private readonly MetadataStore $metadata,
+        private Migrations $migrations,
+        private MetadataStore $metadata,
     ) {
     }
 

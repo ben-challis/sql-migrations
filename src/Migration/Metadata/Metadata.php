@@ -6,9 +6,9 @@ namespace BenChallis\SqlMigrations\Migration\Metadata;
 
 use BenChallis\SqlMigrations\Migration\Version;
 
-final class Metadata
+final readonly class Metadata
 {
-    private function __construct(public readonly Version $version, public readonly State $state)
+    private function __construct(public Version $version, public State $state)
     {
     }
 

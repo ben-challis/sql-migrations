@@ -6,12 +6,12 @@ namespace BenChallis\SqlMigrations\ClassDiscovery;
 
 use Psl\Regex;
 
-final class PhpNamespace
+final readonly class PhpNamespace
 {
     /**
      * @param non-empty-string $namespace
      */
-    private function __construct(private readonly string $namespace)
+    private function __construct(private string $namespace)
     {
         \assert($namespace[\strlen($namespace) - 1] !== '\\');
     }

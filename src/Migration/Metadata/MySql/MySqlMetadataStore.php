@@ -16,12 +16,12 @@ use Psl\Collection\Map;
 use Psl\Collection\MapInterface;
 use Psl\Type;
 
-final class MySqlMetadataStore implements MetadataStore
+final readonly class MySqlMetadataStore implements MetadataStore
 {
     /**
      * @param Executor<MysqlResult, MysqlStatement> $executor
      */
-    public function __construct(private readonly Executor $executor)
+    public function __construct(private Executor $executor)
     {
     }
 

@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace BenChallis\SqlMigrations\ClassDiscovery;
 
-final class DeDuplicatingClassDiscoverer implements ClassDiscoverer
+final readonly class DeDuplicatingClassDiscoverer implements ClassDiscoverer
 {
-    public function __construct(private readonly ClassDiscoverer $delegate)
+    public function __construct(private ClassDiscoverer $delegate)
     {
     }
 

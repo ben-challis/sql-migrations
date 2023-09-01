@@ -11,9 +11,9 @@ use BenChallis\SqlMigrations\Migration\Revision\Revision;
 /**
  * Discovers {@see Revision} implementing classes from classes that are yielded from another {@see ClassDiscoverer}.
  */
-final class RevisionClassDiscoverer implements ClassDiscoverer
+final readonly class RevisionClassDiscoverer implements ClassDiscoverer
 {
-    public function __construct(private readonly ClassDiscoverer $delegate)
+    public function __construct(private ClassDiscoverer $delegate)
     {
     }
 

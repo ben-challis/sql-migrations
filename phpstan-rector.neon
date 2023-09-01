@@ -3,7 +3,7 @@ includes:
   - vendor/php-standard-library/phpstan-extension/extension.neon
 
 parameters:
-  phpVersion: 80100
+  phpVersion: 80200
   tmpDir: tmp/phpstan
   paths:
     - src
