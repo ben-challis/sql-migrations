@@ -13,11 +13,11 @@ use Psl\Collection\VectorInterface;
 final class LazyLoadingMigrations implements Migrations
 {
     /**
-     * @var \Closure(): void|null
+     * @var \Closure(): void
      */
-    private ?\Closure $loader;
+    private \Closure $loader;
 
-    private ?Migrations $migrations = null;
+    private Migrations $migrations;
 
     /**
      * @param \Closure(): Migrations $loader
@@ -26,39 +26,33 @@ final class LazyLoadingMigrations implements Migrations
     {
         $this->loader = function () use ($loader): void {
             $this->migrations = $loader->bindTo(null)();
-            $this->loader = null;
+            unset($this->loader);
         };
     }
 
     public function getAll(): VectorInterface
     {
-        if ($this->loader !== null) {
+        if (isset($this->loader)) {
             ($this->loader)();
         }
-
-        \assert($this->migrations instanceof Migrations);
 
         return $this->migrations->getAll();
     }
 
     public function get(Version $version): Migration
     {
-        if ($this->loader !== null) {
+        if (isset($this->loader)) {
             ($this->loader)();
         }
-
-        \assert($this->migrations instanceof Migrations);
 
         return $this->migrations->get($version);
     }
 
     public function changeState(Version $version, State $state): Migration
     {
-        if ($this->loader !== null) {
+        if (isset($this->loader)) {
             ($this->loader)();
         }
-
-        \assert($this->migrations instanceof Migrations);
 
         return $this->migrations->changeState($version, $state);
     }
