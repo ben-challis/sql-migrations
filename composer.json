@@ -43,7 +43,7 @@
     "amphp/phpunit-util": "^3.0",
     "ergebnis/phpstan-rules": "^2.1",
     "lendable/clock": "^2.3",
-    "php-cs-fixer/shim": "^v3.29.0",
+    "php-cs-fixer/shim": "^v3.30.0",
     "php-standard-library/phpstan-extension": "^1.0",
     "phpstan/phpstan": "^1.10.35",
     "phpstan/phpstan-deprecation-rules": "^1.1.4",
