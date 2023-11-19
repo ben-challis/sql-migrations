@@ -89,16 +89,16 @@
         },
         {
             "name": "amphp/byte-stream",
-            "version": "v2.0.2",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/byte-stream.git",
-                "reference": "408a3b4fc4f4c7604575dc8704f18c1bd91c3ceb"
+                "reference": "0a4b0e80dad92c75e6131f8ad253919211540338"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/byte-stream/zipball/408a3b4fc4f4c7604575dc8704f18c1bd91c3ceb",
-                "reference": "408a3b4fc4f4c7604575dc8704f18c1bd91c3ceb",
+                "url": "https://api.github.com/repos/amphp/byte-stream/zipball/0a4b0e80dad92c75e6131f8ad253919211540338",
+                "reference": "0a4b0e80dad92c75e6131f8ad253919211540338",
                 "shasum": ""
             },
             "require": {
@@ -152,7 +152,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/byte-stream/issues",
-                "source": "https://github.com/amphp/byte-stream/tree/v2.0.2"
+                "source": "https://github.com/amphp/byte-stream/tree/v2.1.0"
             },
             "funding": [
                 {
@@ -160,7 +160,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-01T04:41:26+00:00"
+            "time": "2023-11-19T14:34:16+00:00"
         },
         {
             "name": "amphp/cache",
@@ -1980,16 +1980,16 @@
         },
         {
             "name": "revolt/event-loop",
-            "version": "v1.0.4",
+            "version": "v1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/revoltphp/event-loop.git",
-                "reference": "40292c18e53d9a1b7e6c807f4fda5908552e1ba5"
+                "reference": "fce6063869513de56f639aa522b2ef2fedbf8d73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/40292c18e53d9a1b7e6c807f4fda5908552e1ba5",
-                "reference": "40292c18e53d9a1b7e6c807f4fda5908552e1ba5",
+                "url": "https://api.github.com/repos/revoltphp/event-loop/zipball/fce6063869513de56f639aa522b2ef2fedbf8d73",
+                "reference": "fce6063869513de56f639aa522b2ef2fedbf8d73",
                 "shasum": ""
             },
             "require": {
@@ -1999,7 +1999,7 @@
                 "ext-json": "*",
                 "jetbrains/phpstorm-stubs": "^2019.3",
                 "phpunit/phpunit": "^9",
-                "psalm/phar": "^4.7"
+                "psalm/phar": "^5.15"
             },
             "type": "library",
             "extra": {
@@ -2046,9 +2046,9 @@
             ],
             "support": {
                 "issues": "https://github.com/revoltphp/event-loop/issues",
-                "source": "https://github.com/revoltphp/event-loop/tree/v1.0.4"
+                "source": "https://github.com/revoltphp/event-loop/tree/v1.0.5"
             },
-            "time": "2023-10-22T03:19:00+00:00"
+            "time": "2023-11-19T14:45:35+00:00"
         },
         {
             "name": "symfony/finder",
