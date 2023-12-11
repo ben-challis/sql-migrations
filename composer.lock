@@ -402,16 +402,16 @@
         },
         {
             "name": "amphp/mysql",
-            "version": "v3.0.0-beta.6",
+            "version": "v3.0.0-beta.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/mysql.git",
-                "reference": "8a7d4ac964d7efd3f83f4a0a05fa3af2b6978a8f"
+                "reference": "90f99de80638e2ef486f786a047a15ab2d114d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/mysql/zipball/8a7d4ac964d7efd3f83f4a0a05fa3af2b6978a8f",
-                "reference": "8a7d4ac964d7efd3f83f4a0a05fa3af2b6978a8f",
+                "url": "https://api.github.com/repos/amphp/mysql/zipball/90f99de80638e2ef486f786a047a15ab2d114d5e",
+                "reference": "90f99de80638e2ef486f786a047a15ab2d114d5e",
                 "shasum": ""
             },
             "require": {
@@ -419,8 +419,8 @@
                 "amphp/parser": "^1.1",
                 "amphp/pipeline": "^1",
                 "amphp/socket": "^2",
-                "amphp/sql": "^2",
-                "amphp/sql-common": "^2",
+                "amphp/sql": "^2-beta.6",
+                "amphp/sql-common": "^2-beta.7",
                 "php": ">=8.1"
             },
             "require-dev": {
@@ -460,7 +460,7 @@
             "description": "Asynchronous MySQL client for PHP based on Amp.",
             "support": {
                 "issues": "https://github.com/amphp/mysql/issues",
-                "source": "https://github.com/amphp/mysql/tree/v3.0.0-beta.6"
+                "source": "https://github.com/amphp/mysql/tree/v3.0.0-beta.7"
             },
             "funding": [
                 {
@@ -468,7 +468,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-05-07T13:48:11+00:00"
+            "time": "2023-12-10T03:54:20+00:00"
         },
         {
             "name": "amphp/parallel",
@@ -894,16 +894,16 @@
         },
         {
             "name": "amphp/sql",
-            "version": "v2.0.0-beta.5",
+            "version": "v2.0.0-beta.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/sql.git",
-                "reference": "2cd168c4a22925c24b74259ecf98ce39f5a73e50"
+                "reference": "94798059de6953707fc6e517bba42483bb5e5bf7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/sql/zipball/2cd168c4a22925c24b74259ecf98ce39f5a73e50",
-                "reference": "2cd168c4a22925c24b74259ecf98ce39f5a73e50",
+                "url": "https://api.github.com/repos/amphp/sql/zipball/94798059de6953707fc6e517bba42483bb5e5bf7",
+                "reference": "94798059de6953707fc6e517bba42483bb5e5bf7",
                 "shasum": ""
             },
             "require": {
@@ -936,7 +936,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/sql/issues",
-                "source": "https://github.com/amphp/sql/tree/v2.0.0-beta.5"
+                "source": "https://github.com/amphp/sql/tree/v2.0.0-beta.6"
             },
             "funding": [
                 {
@@ -944,25 +944,25 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-22T03:09:29+00:00"
+            "time": "2023-12-08T23:57:41+00:00"
         },
         {
             "name": "amphp/sql-common",
-            "version": "v2.0.0-beta.6",
+            "version": "v2.0.0-beta.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/sql-common.git",
-                "reference": "a6cef9fb4c9d87e9ab7d40c762ef490dda43f04f"
+                "reference": "283e52e8b258ad58049c748e7aae369d1839536a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/sql-common/zipball/a6cef9fb4c9d87e9ab7d40c762ef490dda43f04f",
-                "reference": "a6cef9fb4c9d87e9ab7d40c762ef490dda43f04f",
+                "url": "https://api.github.com/repos/amphp/sql-common/zipball/283e52e8b258ad58049c748e7aae369d1839536a",
+                "reference": "283e52e8b258ad58049c748e7aae369d1839536a",
                 "shasum": ""
             },
             "require": {
                 "amphp/amp": "^3",
-                "amphp/sql": "^2",
+                "amphp/sql": "^2-beta.6",
                 "php": ">=8.1"
             },
             "require-dev": {
@@ -992,7 +992,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/sql-common/issues",
-                "source": "https://github.com/amphp/sql-common/tree/v2.0.0-beta.6"
+                "source": "https://github.com/amphp/sql-common/tree/v2.0.0-beta.7"
             },
             "funding": [
                 {
@@ -1000,7 +1000,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-06-17T15:45:22+00:00"
+            "time": "2023-12-09T00:12:43+00:00"
         },
         {
             "name": "amphp/sync",
