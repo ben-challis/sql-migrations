@@ -317,16 +317,16 @@
         },
         {
             "name": "amphp/file",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/file.git",
-                "reference": "efeb737b1f19a7fcfe8a763c5ef2ad80dbac93dd"
+                "reference": "45d8d84c4496c695cf2ca2bf05f236a3e36c3558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/file/zipball/efeb737b1f19a7fcfe8a763c5ef2ad80dbac93dd",
-                "reference": "efeb737b1f19a7fcfe8a763c5ef2ad80dbac93dd",
+                "url": "https://api.github.com/repos/amphp/file/zipball/45d8d84c4496c695cf2ca2bf05f236a3e36c3558",
+                "reference": "45d8d84c4496c695cf2ca2bf05f236a3e36c3558",
                 "shasum": ""
             },
             "require": {
@@ -390,7 +390,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/file/issues",
-                "source": "https://github.com/amphp/file/tree/v3.0.1"
+                "source": "https://github.com/amphp/file/tree/v3.0.2"
             },
             "funding": [
                 {
@@ -398,7 +398,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-23T18:54:06+00:00"
+            "time": "2023-12-27T22:52:04+00:00"
         },
         {
             "name": "amphp/mysql",
