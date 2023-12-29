@@ -1131,16 +1131,16 @@
         },
         {
             "name": "azjezz/psl",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/azjezz/psl.git",
-                "reference": "4955aa9d30790a3618b7933762359abdb41fd313"
+                "reference": "a8685b297644f3898c986e89b15309d31b1f47bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/azjezz/psl/zipball/4955aa9d30790a3618b7933762359abdb41fd313",
-                "reference": "4955aa9d30790a3618b7933762359abdb41fd313",
+                "url": "https://api.github.com/repos/azjezz/psl/zipball/a8685b297644f3898c986e89b15309d31b1f47bf",
+                "reference": "a8685b297644f3898c986e89b15309d31b1f47bf",
                 "shasum": ""
             },
             "require": {
@@ -1193,7 +1193,7 @@
             "description": "PHP Standard Library",
             "support": {
                 "issues": "https://github.com/azjezz/psl/issues",
-                "source": "https://github.com/azjezz/psl/tree/2.8.0"
+                "source": "https://github.com/azjezz/psl/tree/2.9.0"
             },
             "funding": [
                 {
@@ -1201,7 +1201,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-22T07:49:48+00:00"
+            "time": "2023-12-29T10:23:32+00:00"
         },
         {
             "name": "brick/math",
