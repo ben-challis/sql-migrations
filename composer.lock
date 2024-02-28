@@ -684,16 +684,16 @@
         },
         {
             "name": "amphp/process",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/process.git",
-                "reference": "a65d3bc1f36ef12d44df42a68f0f0643183f1052"
+                "reference": "a79dc87100be857db2c4bbfd5369585a6d1e658c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/process/zipball/a65d3bc1f36ef12d44df42a68f0f0643183f1052",
-                "reference": "a65d3bc1f36ef12d44df42a68f0f0643183f1052",
+                "url": "https://api.github.com/repos/amphp/process/zipball/a79dc87100be857db2c4bbfd5369585a6d1e658c",
+                "reference": "a79dc87100be857db2c4bbfd5369585a6d1e658c",
                 "shasum": ""
             },
             "require": {
@@ -740,7 +740,7 @@
             "homepage": "https://amphp.org/process",
             "support": {
                 "issues": "https://github.com/amphp/process/issues",
-                "source": "https://github.com/amphp/process/tree/v2.0.1"
+                "source": "https://github.com/amphp/process/tree/v2.0.2"
             },
             "funding": [
                 {
@@ -748,7 +748,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-01-15T16:00:57+00:00"
+            "time": "2024-02-13T20:38:21+00:00"
         },
         {
             "name": "amphp/serialization",
@@ -810,16 +810,16 @@
         },
         {
             "name": "amphp/socket",
-            "version": "v2.2.3",
+            "version": "v2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amphp/socket.git",
-                "reference": "40c80bdc67a9f975ecb5f4083e3c84ef9f23eace"
+                "reference": "4223324c627cc26d44800630411e64856d3344bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amphp/socket/zipball/40c80bdc67a9f975ecb5f4083e3c84ef9f23eace",
-                "reference": "40c80bdc67a9f975ecb5f4083e3c84ef9f23eace",
+                "url": "https://api.github.com/repos/amphp/socket/zipball/4223324c627cc26d44800630411e64856d3344bc",
+                "reference": "4223324c627cc26d44800630411e64856d3344bc",
                 "shasum": ""
             },
             "require": {
@@ -882,7 +882,7 @@
             ],
             "support": {
                 "issues": "https://github.com/amphp/socket/issues",
-                "source": "https://github.com/amphp/socket/tree/v2.2.3"
+                "source": "https://github.com/amphp/socket/tree/v2.2.4"
             },
             "funding": [
                 {
@@ -890,7 +890,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-13T21:03:09+00:00"
+            "time": "2024-02-28T15:56:06+00:00"
         },
         {
             "name": "amphp/sql",
